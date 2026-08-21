@@ -1,0 +1,33 @@
+[project]
+name = "nexus-ai-backend"
+version = "0.1.0"
+description = "Enterprise AI Engineering Copilot"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "alembic>=1.18.5",
+    "asyncpg>=0.31.0",
+    "fastapi>=0.141.1",
+    "pwdlib[argon2]>=0.2,<1.0",
+    "pydantic-settings>=2.14.2",
+    "pydantic[email]>=2.11,<3.0",
+    "pyjwt>=2.10,<3.0",
+    "sqlalchemy>=2.0.51",
+    "uvicorn>=0.52.1",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+    "B",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
