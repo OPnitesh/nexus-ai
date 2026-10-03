@@ -1,4 +1,2 @@
-class EmailAlreadyExistsError(Exception):
-    """Raised when a user tries to register with an existing email."""
-
-    pass
+class AppError(Exception):
+    """Base application error."""
