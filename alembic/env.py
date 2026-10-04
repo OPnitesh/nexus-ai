@@ -11,7 +11,6 @@ from app.core.db.base import Base
 
 # Import all models so they are registered with Base.metadata
 import app.core.db.models
-import app.modules.auth.verification_model
 
 # Alembic Config object
 config = context.config

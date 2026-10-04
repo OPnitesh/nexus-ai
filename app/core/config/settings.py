@@ -1,10 +1,10 @@
 from functools import lru_cache
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+
 class Settings(BaseSettings):
-    """
-    Application configuration loaded from environment variables.
-    """
+    """Application configuration loaded from environment variables."""
 
     APP_NAME: str
     APP_ENV: str
@@ -18,6 +18,8 @@ class Settings(BaseSettings):
 
     REDIS_URL: str
 
+    GOOGLE_API_KEY: str
+
     PINECONE_API_KEY: str = ""
 
     model_config = SettingsConfigDict(
@@ -28,9 +30,8 @@ class Settings(BaseSettings):
 
 @lru_cache
 def get_settings() -> Settings:
-    """
-    Load the settings once and cache them.
-    """
+    """Load settings once and cache them."""
+
     return Settings()
 
 

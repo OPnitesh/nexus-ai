@@ -1,10 +1,5 @@
 """
-Import all SQLAlchemy models here.
-
-This ensures SQLAlchemy registers every model
-with Base.metadata.
+Import SQLAlchemy models here so they register with Base.metadata.
 """
 
-from app.modules.users.model import User
-
-__all__ = ["User"]
+__all__: list[str] = []
